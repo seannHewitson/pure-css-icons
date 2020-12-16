@@ -1,0 +1,153 @@
+<html>
+	<head>
+		<title>Pure CSS Icons</title>
+		<style>
+		/* Reset CSS */
+		html, body, div, span, h1, h2, h3, h4, h5, h6, p,
+		a, img, b, u, i, center, ol, ul, li, form, label,
+		table, tbody, tfoot, thead, tr, th, td, article,
+		footer, header, hgroup, menu, nav, section{
+			margin: 0;
+			padding: 0; 
+			border: 0;
+			vertical-align: baseline;
+			transition:500ms cubic-bezier(.4, 0, .2, 1);
+			-o-transition:500ms cubic-bezier(.4, 0, .2, 1);
+			-ms-transition:500ms cubic-bezier(.4, 0, .2, 1);
+			-moz-transition:500ms cubic-bezier(.4, 0, .2, 1);
+			-webkit-transition:500ms cubic-bezier(.4, 0, .2, 1);
+		}
+		html{	font-size:16px;	}
+
+		body{
+			font-family:Titillium Web, sans-serif;
+			-webkit-font-smoothing:antialiased;
+			max-width:100vw;
+			overflow-x:hidden;
+			background:#29292E;
+			color:white;
+		}
+
+		.content{
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%, -50%);
+			background:#19191D;
+			width:350px;
+			height:350px;
+			padding:1rem;
+			box-shadow: 0 0 10px 3px black;
+		}
+		.content > h1{
+			position:relative;
+			text-align:center;
+			letter-spacing: .2em;
+			margin-bottom:.5em;
+		}
+		.content > h1:after{
+			content:'';
+			position:absolute;
+			display:block;
+			width:100%;
+			height:.075em;
+			background:currentColor;
+		}
+
+		.icons_container{
+			position:relative;
+			display:block;
+			width:100%;
+			text-align:center;
+			font-size:1.5rem;
+		}
+
+		.icon{
+			position:relative;
+			display:block;
+			width:1em;
+			height:1em;
+			background:red;
+		}
+		.icons_container .icon{
+			display:inline-block;
+		}
+
+		.icon .ico{
+			position:absolute;
+			display:block;
+			top:50%;
+			width:1em;
+			height:.1em;
+			background: currentColor;
+			transform:translateY(-50%);
+		}
+		.icon .ico:after,
+		.icon .ico:before{
+			content:'';
+			position:absolute;
+			display:block;
+			width:100%;
+			height:100%;
+			background:inherit;
+		}
+
+		.ico.chevron{
+			top:calc(50% + .125em);
+			left:50%;
+			width:.1em;
+			transform:translate(-50%, -50%);
+		}
+		.ico.chevron:after,
+		.ico.chevron:before{
+			top:calc(50% + .05em);
+			right:25%;
+			width:.5em;
+			transform-origin:right;
+			transform:translateY(-50%) rotate(35deg);
+		}
+		.ico.chevron:before{
+			right:auto;
+			left:25%;
+			transform-origin:left;
+			transform:translateY(-50%) rotate(-35deg);
+		}
+
+		.ico.chevron.up{
+			top:calc(50% - .125em);
+			transform:translate(-50%, -50%) rotate(180deg);
+		}
+
+		.ico.chevron.left{
+			top:50%;
+			left:calc(50% - .125em);
+			transform:translate(-50%, -50%) rotate(90deg);
+		}
+		.ico.chevron.right{
+			top:50%;
+			left:calc(50% + .135em);
+			transform:translate(-50%, -50%) rotate(-90deg);
+		}
+		</style>
+	</head>
+	<body>
+		<div class='content'>
+			<h1>Pure CSS Icons</h1>
+			<div class='icons_container'>
+				<span class='icon'>
+					<i class='ico chevron up'></i>
+				</span>
+				<span class='icon'>
+					<i class='ico chevron left'></i>
+				</span>
+				<span class='icon'>
+					<i class='ico chevron'></i>
+				</span>
+				<span class='icon'>
+					<i class='ico chevron right'></i>
+				</span>
+				
+			</div>
+		</div>
+	</body>
+</html>
