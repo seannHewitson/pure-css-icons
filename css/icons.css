@@ -77,7 +77,6 @@ section h2{
     margin-right:auto;
     text-align:center;
     margin-bottom:.25em;
-    background:red;
 }
 
 .icon .ico{
@@ -107,6 +106,15 @@ section h2{
     height:100%;
     background:inherit;
 }
+.icon .ico,
+.icon .ico:after,
+.icon .ico:before{
+    transition:500ms cubic-bezier(.4, 0, .2, 1);
+	-o-transition:500ms cubic-bezier(.4, 0, .2, 1);
+	-ms-transition:500ms cubic-bezier(.4, 0, .2, 1);
+	-moz-transition:500ms cubic-bezier(.4, 0, .2, 1);
+	-webkit-transition:500ms cubic-bezier(.4, 0, .2, 1);
+}
 
 li:hover .ico,
 li:hover .ico:after,
@@ -120,44 +128,44 @@ li:hover .text{
 /*  Menu Icons  */
 .ico.beehive,
 .ico.hamburger,
-.ico.hamburger-s,
-.ico.hamburger-s-reverse,
+.ico.hamburger-alt,
+.ico.hamburger-alt-reverse,
 .ico.beehive:after,
 .ico.hamburger:after,
-.ico.hamburger-s:after,
-.ico.hamburger-s-reverse:after,
+.ico.hamburger-alt:after,
+.ico.hamburger-alt-reverse:after,
 .ico.beehive:before,
 .ico.hamburger:before,
-.ico.hamburger-s:before,
-.ico.hamburger-s-reverse:before{
+.ico.hamburger-alt:before,
+.ico.hamburger-alt-reverse:before{
     width:1em;
     height:100%;
 }
 .ico.beehive:after,
 .ico.hamburger:after,
-.ico.hamburger-s:after,
-.ico.hamburger-s-reverse:after{
+.ico.hamburger-alt:after,
+.ico.hamburger-alt-reverse:after{
     top:-.35em;
     left:0;
 }
 .ico.beehive:before,
 .ico.hamburger:before,
-.ico.hamburger-s:before,
-.ico.hamburger-s-reverse:before{
+.ico.hamburger-alt:before,
+.ico.hamburger-alt-reverse:before{
     top:auto;
     bottom:-.35em;
     left:0;
 }
 .ico.beehive:after,
-.ico.hamburger-s:after,
-.ico.hamburger-s-reverse:after,
+.ico.hamburger-alt:after,
+.ico.hamburger-alt-reverse:after,
 .ico.beehive:before,
-.ico.hamburger-s:before,
-.ico.hamburger-s-reverse:before{
+.ico.hamburger-alt:before,
+.ico.hamburger-alt-reverse:before{
     width:50%;
 }
-.ico.hamburger-s:before,
-.ico.hamburger-s-reverse:after,
+.ico.hamburger-alt:before,
+.ico.hamburger-alt-reverse:after,
 .ico.beehive:after,
 .ico.beehive:before{
     left:50%;
@@ -238,4 +246,23 @@ li:hover .text{
     top:auto;
     bottom:.03em;
     transform:rotate(-45deg);
+}
+
+.ico.close{
+    width:100%;
+    transform:translate(-50%, -50%) rotate(-45deg) !important;
+}
+.ico.close:after,
+.ico.close:before{
+    transform-origin:right;
+    top:0;
+    left:0;
+    width:50%;
+    transform:rotate(90deg);
+}
+.ico.close:before{
+    top:auto;
+    bottom:0;
+    left:50%;
+    transform-origin:left;
 }
